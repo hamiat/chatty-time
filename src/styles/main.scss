@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables*/
+$primary: red; 
+$secondary: red; 
+
+.App {
+  display: flex;
+  flex-direction: column;
+ 
+  
+  .container {
+    flex-grow: 1;
+    padding: 0 60px;
+  }
+
+}
