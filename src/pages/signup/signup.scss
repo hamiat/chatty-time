@@ -1,7 +1,32 @@
 .form {
     display: flex;
     flex-direction: column;
-   width: 50%;
-   margin: 0 auto;
-padding: 64px 48px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 64px 48px;
+    max-width: 500px;
+
+    h2 {
+        padding: 12px 0;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        padding: 8px 0;
+
+        span {
+            padding: 4px 0;
+        }
+
+        input {
+            padding: 4px 0;
+        }
+    }
+
+    .btn {
+        margin: 12px 0;
+        padding: 8px 0;
+        width: 35%;
+    }
 }

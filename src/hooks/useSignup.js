@@ -18,12 +18,12 @@ export const useSignup = () => {
             );
             console.log(response.user);
 
-            if (!res) {
+            if (!response) {
                 throw new Error("Could not complete signup");
             }
 
             //add display name to user
-            await res.user.updateProfile({ displayName });
+            await response.user.updateProfile({ displayName });
 
             setIsPending(false);
             setError(null);
