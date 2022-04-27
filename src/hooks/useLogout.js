@@ -5,7 +5,7 @@ import { useAuthContext } from "./useAuthContext";
 export const useLogout = () => {
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(false);
-    const { dispatch } = useAuthContext;
+    const { dispatch } = useAuthContext();
 
     const logout = async () => {
         setError(null);

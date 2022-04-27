@@ -1,15 +1,18 @@
 @import "../../styles/main.module.scss";
 
 nav {
+    h1 {
+        color: $dark;
+    }
     ul {
         display: flex;
+        align-items: center;
         width: 200px;
         justify-content: space-between;
         list-style: none;
 
-        li {
-            @include up-hover;
-            cursor: pointer;
+        .links {
+            @include links;
         }
 
         .logoutBtn {

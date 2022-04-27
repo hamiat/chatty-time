@@ -5,11 +5,15 @@ export default function Navbar() {
     const { logout } = useLogout;
     return (
         <>
-            <h1>Chatty_time</h1>
+            <h1>Chatty Time</h1>
             <nav>
                 <ul>
-                    <li>Login</li>
-                    <li>Signup</li>
+                    <li className={styles.links}>
+                        <a href="/">Login</a>
+                    </li>
+                    <li className={styles.links}>
+                        <a href="/">Signup</a>
+                    </li>
                     <li>
                         <button className={styles.logoutBtn} onClick={logout}>
                             Logout

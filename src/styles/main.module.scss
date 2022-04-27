@@ -11,6 +11,7 @@
 /* Variables*/
 $primary: rgba(197, 251, 110, 0.979);
 $secondary: #1f9751;
+$dark: #313131;
 
 .App {
     display: flex;
@@ -21,6 +22,10 @@ $secondary: #1f9751;
         justify-content: space-between;
         padding: 24px 48px;
         background-color: $primary;
-        box-shadow: 0px 15px 10px -15px #111;
+        box-shadow: 0px 15px 10px -15px $dark;
+    }
+
+    a {
+        text-decoration: none;
     }
 }
