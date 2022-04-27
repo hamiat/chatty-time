@@ -28,5 +28,15 @@
         margin: 12px 0;
         padding: 8px 0;
         width: 35%;
+        background: none;
+        border: 2px solid #1f9751;
+        border-radius: 4px;
+        color: #1f9751;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+            background: #1f9751;
+            color: #fff;
+        }
     }
 }
