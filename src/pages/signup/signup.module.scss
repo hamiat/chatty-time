@@ -1,44 +1,49 @@
 @import "../../styles/main.module.scss";
 
 .form {
+    @include box;
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin: 0 auto;
-    padding: 64px 48px;
-    max-width: 500px;
+    margin: 128px auto;
+    padding: 48px 64px;
+    max-width: 600px;
+    border: 1px solid $secondary;
+    border-radius: 2px;
+    background: $secondary;
 
     h2 {
+        @include h2-title;
         padding: 12px 0;
+        text-align: center;
     }
 
     label {
+        @include input-labels;
         display: flex;
         flex-direction: column;
-        padding: 8px 0;
+        padding: 12px 0;
 
         span {
-            padding: 4px 0;
+            padding: 8px 0;
         }
 
         input {
             padding: 4px 0;
+            border: none;
+            border-radius: 5px;
         }
     }
 
     .btn {
-        margin: 12px 0;
-        padding: 8px 0;
-        width: 35%;
-        background: none;
-        border: 2px solid $secondary;
-        border-radius: 4px;
-        color: $secondary;
+        @include generic-btn;
+        margin: 24px auto;
+        padding: 10px 24px;
         font-weight: bold;
-        cursor: pointer;
-        &:hover {
-            background: $secondary;
-            color: #fff;
-        }
+        font-size: 18px;
+    }
+
+    .error {
+        @include error;
     }
 }

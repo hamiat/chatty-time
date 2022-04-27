@@ -52,7 +52,7 @@ export default function Signup() {
                     loading...
                 </button>
             )}
-            {error && <p>{error}</p>}
+            {error && <p className={styles.error}>{error}</p>}
         </form>
     );
 }

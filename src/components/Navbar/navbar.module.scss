@@ -1,9 +1,11 @@
 @import "../../styles/main.module.scss";
 
+h1 {
+    color: $primary;
+    text-shadow: 1px 1px $dark;
+}
+
 nav {
-    h1 {
-        color: $dark;
-    }
     ul {
         display: flex;
         align-items: center;
@@ -17,6 +19,8 @@ nav {
 
         .logoutBtn {
             @include generic-btn;
+            padding: 8px 12px;
+            font-size: 14px;
         }
     }
 }

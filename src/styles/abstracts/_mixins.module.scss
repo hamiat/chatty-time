@@ -1,13 +1,14 @@
 @mixin generic-btn {
-    cursor: pointer;
-    padding: 4px 8px;
     background: none;
-    border-radius: 5px;
-    border: 1px solid;
-    color: $dark;
+    border: 1px solid $primary;
+    border-radius: 4px;
+    color: $primary;
+    font-family: monospace;
+    cursor: pointer;
 
     &:hover {
-        color: $secondary;
+        background: $primary;
+        color: $dark;
     }
     &:active {
         transform: rotate(-2deg);
@@ -20,4 +21,26 @@
     &:hover {
         margin-top: -2px;
     }
+}
+@mixin box {
+    box-shadow: 10px 10px 13px -7px #ababab, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+@mixin error {
+    color: $dark;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+/**********Titles*************/
+@mixin h2-title {
+    font-family: monospace;
+    color: $primary;
+    font-size: 46px;
+    text-shadow: 1px 1px $dark;
+}
+@mixin input-labels {
+    font-family: monospace;
+    color: $dark;
+    font-size: 16px;
 }
