@@ -1,4 +1,4 @@
-import "./signup.scss";
+import styles from "./signup.module.scss";
 import { useState } from "react";
 import { useSignup } from "../../hooks/useSignup";
 
@@ -16,7 +16,7 @@ export default function Signup() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="form">
+        <form onSubmit={handleSubmit} className={styles.form}>
             <h2>Signup</h2>
             <label>
                 <span>email:</span>
@@ -43,12 +43,12 @@ export default function Signup() {
                 />
             </label>
             {!isPending && (
-                <button className="btn" type="submit">
+                <button className={styles.btn} type="submit">
                     Send
                 </button>
             )}
             {isPending && (
-                <button className="btn" disabled>
+                <button className={styles.btn} disabled>
                     loading...
                 </button>
             )}

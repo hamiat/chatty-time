@@ -1,3 +1,5 @@
+@import "../../styles/main.module.scss";
+
 .form {
     display: flex;
     flex-direction: column;
@@ -29,13 +31,13 @@
         padding: 8px 0;
         width: 35%;
         background: none;
-        border: 2px solid #1f9751;
+        border: 2px solid $secondary;
         border-radius: 4px;
-        color: #1f9751;
+        color: $secondary;
         font-weight: bold;
         cursor: pointer;
         &:hover {
-            background: #1f9751;
+            background: $secondary;
             color: #fff;
         }
     }

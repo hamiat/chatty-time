@@ -1,0 +1,19 @@
+@import "../../styles/main.module.scss";
+
+nav {
+    ul {
+        display: flex;
+        width: 200px;
+        justify-content: space-between;
+        list-style: none;
+
+        li {
+            @include up-hover;
+            cursor: pointer;
+        }
+
+        .logoutBtn {
+            @include generic-btn;
+        }
+    }
+}

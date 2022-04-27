@@ -1,0 +1,19 @@
+@mixin generic-btn {
+    cursor: pointer;
+    padding: 4px 8px;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid;
+    &:hover {
+        box-shadow: 2px 2px $secondary;
+    }
+    &:active {
+        transform: translateY(-2px);
+        transform: translateX(-2px);
+    }
+}
+@mixin up-hover {
+    &:hover {
+        margin-top: -2px;
+    }
+}
