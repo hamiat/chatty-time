@@ -1,8 +1,8 @@
 import styles from "./navbar.module.scss";
-import { useLogout } from "../../hooks/useLogout";
+import { useAuthentication } from "../../hooks/useAuthentication";
 
 export default function Navbar() {
-    const { logout } = useLogout();
+    const { logout } = useAuthentication();
     return (
         <>
             <h1>Chatty Time</h1>

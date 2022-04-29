@@ -1,23 +1,19 @@
-import styles from "./signup.module.scss";
 import { useState } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
+import styles from "./login.module.scss";
 
-export default function Signup() {
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-    const [displayName, setDisplayName] = useState("");
-
-    const { signup, isPending, error } = useAuthentication();
+export default function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const { login, error, isPending } = useAuthentication();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        signup(email, password, displayName);
-        e.target.value = "";
+        login(email, password);
     };
-
     return (
         <form onSubmit={handleSubmit} className={styles.form}>
-            <h2>Signup</h2>
+            <h2>Login</h2>
             <label>
                 <span>email:</span>
                 <input
@@ -32,14 +28,6 @@ export default function Signup() {
                     type="password"
                     onChange={(e) => setPassword(e.target.value)}
                     value={password}
-                />
-            </label>
-            <label>
-                <span>display name:</span>
-                <input
-                    type="text"
-                    onChange={(e) => setDisplayName(e.target.value)}
-                    value={displayName}
                 />
             </label>
             {!isPending && (

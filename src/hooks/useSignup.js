@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projectAuth } from "../firebase/config";
 import { useAuthContext } from "./useAuthContext";
 
 export const useSignup = () => {
+    const [isCanceled, setIsCanceled] = useState(false);
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(false);
     const { dispatch } = useAuthContext();
@@ -29,14 +30,23 @@ export const useSignup = () => {
             //dispatch login action - works with authReducer function in useAuthContext
             dispatch({ type: "LOGIN", payload: response.user });
 
-            setIsPending(false);
-            setError("Success!");
+            if (!isCanceled) {
+                setIsPending(false);
+                setError("Success!");
+            }
         } catch (err) {
-            console.log(err.message);
-            setError(err.message);
-            setIsPending(false);
+            if (!isCanceled) {
+                console.log(err.message);
+                setError(null);
+                setIsPending(false);
+            }
         }
     };
+
+    //so that state isn't updated when the component has unmounted
+    useEffect(() => {
+        return () => setIsCanceled(true);
+    }, []);
 
     return { error, isPending, signup };
 };

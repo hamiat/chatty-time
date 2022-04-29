@@ -1,0 +1,49 @@
+@import "./main.module.scss";
+
+.form {
+    @include box;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 128px auto;
+    padding: 48px 64px;
+    max-width: 600px;
+    border: 1px solid $secondary;
+    border-radius: 2px;
+    background: $secondary;
+
+    h2 {
+        @include h2-title;
+        padding: 12px 0;
+        text-align: center;
+    }
+
+    label {
+        @include input-labels;
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0;
+
+        span {
+            padding: 8px 0;
+        }
+
+        input {
+            padding: 4px 0;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+
+    .btn {
+        @include generic-btn;
+        margin: 24px auto;
+        padding: 10px 24px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .error {
+        @include error;
+    }
+}
