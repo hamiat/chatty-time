@@ -17,8 +17,13 @@
 }
 @mixin links {
     text-decoration: none;
-    cursor: pointer;
+    color: $primary;
+    text-overflow: 1px 1px $dark;
+    font-weight: 600;
+    font-size: 22px;
+    font-family: monospace;
     &:hover {
+        border-bottom: 1px dotted $primary;
         margin-top: -2px;
     }
 }
@@ -43,4 +48,11 @@
     font-family: monospace;
     color: $dark;
     font-size: 16px;
+}
+
+/******Paragraphs*************/
+@mixin textMedium {
+    font-family: monospace;
+    color: $dark;
+    font-size: 22px;
 }
